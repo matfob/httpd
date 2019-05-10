@@ -1,0 +1,13 @@
+---
+# tasks file for httpd---
+
+- name: installation du serveur web
+  yum:
+    name: httpd 
+    state: present
+
+- name: démarrage du serveur web
+  service:
+    name: httpd
+    state: started
+    enabled: yes
